@@ -1,0 +1,86 @@
+/* Top of game board */
+#board {
+    margin: 0 auto;
+}
+
+.board_row {
+    width: 504px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.board_row_center {
+    border: 0px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.box {
+    width: 164px;
+    height: 164px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;
+}
+
+/*Bottom of game board*/
+#buttons {  
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border: 1px solid black;
+}
+
+#number_pad {
+    width: 500px;
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.num_cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#input_mode {
+    width: 500px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.check_box {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    border: 1px solid black;
+}
