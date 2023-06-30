@@ -1,5 +1,5 @@
 function init_game() {
-    let board = document.getElementById("center");
+    let board = document.getElementById("sudoku");
 
     let table = document.createElement("table");
     table.id = "board";
@@ -20,6 +20,8 @@ function init_game() {
                 let cell = document.createElement("div");
                 cell.classList.add('cell');
 
+                cell.setAttribute('onclick', 'click_cell(this)')
+
                 td.appendChild(cell)
             }
 
@@ -31,4 +33,4 @@ function init_game() {
     board.appendChild(table)
 }
 
-// init_game();
+init_game();

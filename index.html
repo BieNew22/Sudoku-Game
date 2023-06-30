@@ -18,117 +18,10 @@
     </div>
 
     <div id="center">
-        <table id="board">
-            <tr class="board_row">
-                <td class="box">
-                    <div class="cell">1</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-            </tr>
-            <tr class="board_row board_row_center">
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-            </tr>
-            <tr class="board_row">
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-                <td class="box">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </td>
-            </tr>
-        </table>
-
+        <div id="sudoku"></div>
         <div id="buttons">
             <div id="number_pad">
-                <div class="num_cell" onclick="select_num(this)">1</div>
+                <div id="numPad1" class="num_cell select" onclick="select_num(this)">1</div>
                 <div class="num_cell" onclick="select_num(this)">2</div>
                 <div class="num_cell" onclick="select_num(this)">3</div>
                 <div class="num_cell" onclick="select_num(this)">4</div>
@@ -139,15 +32,15 @@
                 <div class="num_cell" onclick="select_num(this)">9</div>
             </div>
             <div id="input_mode">
-                <div class="check_box select" onclick="select_mode(this)" id="input">입력</div>
-                <div class="check_box" onclick="select_mode(this)" id="candidate">후보수</div>
-                <div class="check_box" onclick="select_mode(this)" id="erase">지우기</div>
-                <div class="check_box" id="check">확인하기</div>
+                <div class="check_box select" onclick="select_mode(this)" id="input">Write</div>
+                <div class="check_box" onclick="select_mode(this)" id="candidate">Note</div>
+                <div class="check_box" onclick="select_mode(this)" id="erase">Delete</div>
+                <div class="check_box" id="check">Check</div>
             </div>
         </div>
     </div>
 
-    <div id="footer">
+    <div id="footer" style="display:none">
         <p>Copyright @BieNew22</p>
     </div>
     
