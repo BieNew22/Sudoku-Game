@@ -3,10 +3,11 @@
  * Role of this file
  *              - provide sudoku data
  *              - make sudoku puzzle
- *              - use get_puzzle(sudokuDifficulty) method to get puzzle
+ *              - use get_seed(sudokuDifficulty) method to get puzzle basis
  * Date of latest update - 2023.07.02
  */
 
+let gameMode = document.getElementById("difficulty");
 let selectMode = document.getElementById("input");
 let selectNum = document.getElementById("numPad1");
 
@@ -105,7 +106,7 @@ class Seed {
         ];
     }
 
-    get_puzzle(mode) {
+    get_seed(mode) {
         let sudokuDifficulty;
         if (mode.innerText == 'easy') {
             sudokuDifficulty = this.easy;
