@@ -1,3 +1,12 @@
+function select_difficulty(type) {
+    gameMode = type;
+
+    document.getElementById("popup_background").style.display = 'none';
+    document.getElementById("popup_content").style.display = 'none';
+
+    start_game();
+}
+
 function select_mode(type) {
     selectMode.classList.remove('select');
     selectMode = type;

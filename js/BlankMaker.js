@@ -20,9 +20,9 @@ class BlankMaker {
         this.solver = new Solver();
 
         this.blank = 0;
-        if (gameMode.innerText == 'easy') {
+        if (gameMode.id == 'easy') {
             this.blank = 40;
-        } else if (gameMode.innerText == 'normal') {
+        } else if (gameMode.id == 'normal') {
             this.blank = 50;
         } else {
             this.blank = 60;

@@ -7,7 +7,7 @@
  * Date of latest update - 2023.07.02
  */
 
-let gameMode = document.getElementById("difficulty");
+let gameMode = document.getElementById("easy");
 let selectMode = document.getElementById("input");
 let selectNum = document.getElementById("numPad1");
 
@@ -108,9 +108,9 @@ class Seed {
 
     get_seed(mode) {
         let sudokuDifficulty;
-        if (mode.innerText == 'easy') {
+        if (mode.id == 'easy') {
             sudokuDifficulty = this.easy;
-        } else if (mode.innerText == 'normal') {
+        } else if (mode.id == 'normal') {
             sudokuDifficulty = this.normal;
         } else {
             sudokuDifficulty = this.hard;

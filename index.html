@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/center.css">
     <link rel="stylesheet" type="text/css" href="./css/board.css">
+    <link rel="stylesheet" type="text/css" href="./css/popup.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" type="text/css" href="./css/keyEvent.css"
 </head>
@@ -40,7 +41,13 @@
         </div>
     </div>
 
-    <div id="difficulty"></div>
+    <div id="popup_background"></div>
+    <div id="popup_content">
+        <h2>Select Difficulty</h2>
+        <button id="easy" onclick="select_difficulty(this)">easy</button>
+        <button id="normal" onclick="select_difficulty(this)">normal</button>
+        <button id="hard" onclick="select_difficulty(this)">hard</button>
+    </div>
 
     <div id="footer" style="display:none">
         <p>Copyright @BieNew22</p>
