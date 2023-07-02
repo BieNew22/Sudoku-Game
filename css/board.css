@@ -44,6 +44,10 @@
     flex-wrap: wrap;
 }
 
+.fixed {
+    color: blue;
+}
+
 /*Bottom of game board*/
 #buttons {  
     width: 500px;

@@ -1,3 +1,10 @@
+/**
+ * Writer - 안학룡(BieNew22)
+ * Role of this file
+ *              - A set of event related functions
+ * Date of latest update - 2023.07.02
+ */
+
 function select_difficulty(type) {
     gameMode = type;
 
@@ -20,11 +27,6 @@ function select_num(num) {
 }
 
 function click_cell(cell) {
-
-    // check state changeable
-    if (cell.classList.contains('fixed')) {
-        return;
-    }
 
     if (selectMode.id == "input") {
         // if mode = input
@@ -62,4 +64,8 @@ function click_cell(cell) {
             cell.innerText = '';
         }
     }
+}
+
+function click_check() {
+    board.check_result();
 }

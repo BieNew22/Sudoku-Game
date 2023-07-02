@@ -3,3 +3,11 @@
     height: auto;
     margin: 0 auto;
 }
+
+.num_cell, .check_box:hover{
+    transition: all 0.5s ease;
+}
+
+.num_cell:hover, .check_box:hover {
+    border-radius: 15px;
+}
