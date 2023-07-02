@@ -15,16 +15,61 @@
 class BlankMaker {
     constructor() {
         this.seed = new Seed().get_seed(gameMode);
-        
-        this.blank = 0;
+        this.puzzle = this.seed.map(v => v.slice());
 
+        this.solver = new Solver();
+
+        this.blank = 0;
         if (gameMode.innerText == 'easy') {
-            
+            this.blank = 40;
+        } else if (gameMode.innerText == 'normal') {
+            this.blank = 50;
+        } else {
+            this.blank = 60;
         }
-    
+        this.make_puzzle();
     }
 
-    make_puzzle(depth) {
+    get_result() {
+        return this.puzzle;
+    }
 
+    make_puzzle() {
+        let countBlank = 0;
+        let x, y, tmp;
+        for (let t = 0; t < 500; t++) { 
+
+            do {
+                x = Math.floor(Math.random() * 9);
+                y = Math.floor(Math.random() * 9);
+            } while (this.puzzle[y][x] == 0);
+            
+            tmp = this.puzzle[y][x];
+            this.puzzle[y][x] = 0;
+
+            this.solver.set_data(this.puzzle);
+
+            if (this.is_availed(this.solver.get_result())) {
+                countBlank += 1;
+            } else {
+                this.puzzle[y][x] = tmp;
+            }
+
+            if (countBlank == this.blank) {
+                break;
+            }
+        }
+    }
+
+    is_availed(data) {
+        for (let y = 0; y < 9; y++) {
+            for (let x = 0; x < 9; x++) {
+                if (data[y][x] != this.seed[y][x]) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }

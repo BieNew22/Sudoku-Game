@@ -116,7 +116,6 @@ class Seed {
             sudokuDifficulty = this.hard;
         }
 
-        // deep copy : array.slice();
         let board = sudokuDifficulty[Math.floor(Math.random() * sudokuDifficulty.length)];
 
         // shuffle board

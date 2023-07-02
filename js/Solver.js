@@ -8,9 +8,9 @@
  */
 
 class Solver {
-    constructor(data) {
-        this.board = data.slice();
-
+    constructor() {
+        this.board = null;
+        
         this.rows = new Array(9);
         this.cols = new Array(9);
         this.boxes = new Array(9);
@@ -20,6 +20,17 @@ class Solver {
             this.rows[i] = new Set();
             this.cols[i] = new Set();
             this.boxes[i] = new Set();
+        }
+    }
+
+    set_data(data) {
+        this.board = data.map(v => v.slice());
+
+        // remove all old data
+        for (let i = 0; i < 9; i++) {
+            this.rows[i].clear();
+            this.cols[i].clear();
+            this.boxes[i].clear();
         }
 
         // add each area has been filled number
@@ -48,8 +59,6 @@ class Solver {
 
     // backtracking to find answer
     fill(y, x) {
-
-        console.log(y, x)
 
         if (y == 8 && x == 9) {
             return true;
